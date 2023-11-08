@@ -43,16 +43,9 @@ public class Main {
     }
 
     public static long countLines(File f) throws IOException {
-
-        long wordCount = 0;
-
         List<String> list = Files.readAllLines(f.toPath());
-        for (String s : list) {
-            String[] ary = s.split(" ");
-            wordCount += ary.length;
-        }
-
-        return wordCount;
+        
+        return list.size();
     }
 
 }
